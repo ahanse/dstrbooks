@@ -1,4 +1,2 @@
 # dstrbooks
-The Distributed Book Shel
-
-f
+The Distributed Book Shelf
