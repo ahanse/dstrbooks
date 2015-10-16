@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+import uuid
 
 class Book(models.Model):
-    uuid = models.UUIDField()
     user = models.ForeignKey(User)
     author_details = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
@@ -33,6 +33,7 @@ class Book(models.Model):
     genre = models.CharField(max_length=200)
     date_added = models.DateTimeField()
     last_update_date = models.DateTimeField()
+    uuid = models.UUIDField(default=uuid.uuid4)
 
 class Bookshelf(models.Model):
     export_id = models.PositiveIntegerField()
